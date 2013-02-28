@@ -11,8 +11,11 @@ function group_ux_init() {
   elgg_register_js('group_ux', $js);
   elgg_register_simplecache_view('js/group_ux');
   
+  elgg_register_plugin_hook_handler('route', 'groups', 'group_ux_group_router', 0);
+  
   elgg_register_event_handler('create', 'group', 'group_ux_default_permissions_hook', 1000);
   elgg_register_event_handler('update', 'group', 'group_ux_default_permissions_hook', 1000);
+  elgg_register_event_handler('pagesetup', 'system', 'group_ux_pagesetup');
   
 }
 
