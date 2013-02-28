@@ -6,6 +6,7 @@ $english = array(
 	'group_ux:user:default' => "User default access",
 	'group_ux:group:default:permissions' => "Content Default Access",
 	'group_ux:group:default:permissions:helptext' => "Groups created prior to this plugin being enabled will use this value (can be overridden by group admins on a per-group basis).  This will also be the default value selected on the group creation form.",
+	'groups_ux:discussions:join' => "You must be a member of the group to participate in discussions. %s",
 );
 					
 add_translation("en",$english);

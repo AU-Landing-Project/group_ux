@@ -5,6 +5,7 @@ require_once 'lib/events.php';
 
 function group_ux_init() {
   elgg_extend_view('groups/edit', 'groups/edit/default_permissions');
+  elgg_extend_view('discussion/replies', 'discussion/replies/join');
   
   // register the group_ux JavaScript
   $js = elgg_get_simplecache_url('js', 'group_ux');
