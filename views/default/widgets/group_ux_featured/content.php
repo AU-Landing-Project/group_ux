@@ -33,7 +33,5 @@ if (!$content) {
 echo $content;
 
 if ($all_link) {
-  echo '<br><br>';
-
   echo $all_link;
 }

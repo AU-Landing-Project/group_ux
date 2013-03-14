@@ -2,5 +2,8 @@
 
 x.x (mm/dd/yyyy):
 
+1.1 ():
+ - a bit better styling on the group discussion notice to differentiate it from the discussion itself
+
 1.0 (04/03/2013):
  - Initial Release

@@ -18,5 +18,9 @@ if (elgg_is_logged_in() && !$group->isMember() && !$show_add_form) {
 	  'href' => $url
   ));
   
-  echo elgg_echo('groups_ux:discussions:join', array($link));
+  echo elgg_view('output/longtext', array(
+	 'value' =>  '<hr>' . elgg_echo('groups_ux:discussions:join', array($link)),
+	  'class' => 'elgg-subtext'
+  ));
+  
 }
