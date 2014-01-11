@@ -22,6 +22,9 @@ $english = array(
 	'group_ux:widget:featured:description' => "Displays a list of the most recent featured content",
 	'group_ux:widget:num_results' => "Number of results to show:",
 	'group_ux:group:featured:sidelink' => "Group featured content",
+	
+	//lock blogs
+	'group_ux:lockblog' => "Only group admins can make blog posts"
 );
 					
 add_translation("en",$english);

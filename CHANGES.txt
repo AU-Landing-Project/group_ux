@@ -1,6 +1,8 @@
 == Version History ==
 
 x.x (mm/dd/yyyy):
+1.2 (01/10/2014)
+ - adds ability for group admin to remove 'add' options for blogs
 
 1.1 ():
  - a bit better styling on the group discussion notice to differentiate it from the discussion itself

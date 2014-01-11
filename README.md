@@ -9,3 +9,4 @@ A collection of tweaks for elgg group user experience
 4. Let users know they must be group members to participate in discussions, and link to join group
 5. Provide group admins with a method for making group content 'featured', featured content
    can be viewed on a dedicated page, on the group profile, or in a widget (if using widget manager)
+6. Allow group admins to prevent users from adding blog posts (just removes 'add' button, does not disable adding altogether)   

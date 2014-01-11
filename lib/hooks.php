@@ -111,3 +111,15 @@ function group_ux_group_router($hook, $type, $return, $params) {
 	}
   }
 }
+
+
+
+/* gets rid of blog add title button 
+	needed due to bug in unregister menu item for blog title
+	
+*/
+function group_ux_killadd($hook, $type, $return, $params){
+	if (elgg_get_context('blog')){
+		return array();
+	}
+}
