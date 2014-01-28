@@ -35,6 +35,13 @@
     <plugin>group_tools</plugin>
     <priority>after</priority>
   </requires>
+
+  <!-- After pages to override write_access input -->
+  <requires>
+    <type>priority</type>
+    <plugin>pages</plugin>
+    <priority>after</priority>
+  </requires>
   
 	<category>Site Admin</category>
 </plugin_manifest>
