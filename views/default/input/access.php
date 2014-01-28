@@ -16,6 +16,11 @@ if (isset($vars['class'])) {
 	$vars['class'] = "elgg-input-access";
 }
 
+if (!isset($group_ux_write_access)) {
+  // Set by write_access.php to indicate that this is a write access permission dropdown
+  $group_ux_write_access = false;
+}
+
 $value = get_default_access();
 $group = elgg_get_page_owner_entity();
 if (elgg_instanceof($group, 'group') && $vars['name'] != 'membership') {
@@ -54,6 +59,11 @@ if (elgg_instanceof($group, 'group') && $vars['name'] != 'membership') {
   }
 }
 
+$options = get_write_access_array();
+if ($group_ux_write_access) {
+  unset($options[ACCESS_PUBLIC]);
+}
+
 $defaults = array(
 	'disabled' => false,
 	'value' => $value,
@@ -61,7 +71,7 @@ $defaults = array(
 );
 
 if (isset($vars['entity'])) {
-	$defaults['value'] = $vars['entity']->access_id;
+	$defaults['value'] = $group_ux_write_access ? $vars['entity']->write_access_id : $vars['entity']->access_id;
 	unset($vars['entity']);
 }
 
@@ -69,6 +79,10 @@ $vars = array_merge($defaults, $vars);
 
 if ($vars['value'] == ACCESS_DEFAULT) {
 	$vars['value'] = get_default_access();
+}
+
+if ($group_ux_write_access && $vars['value'] == ACCESS_PUBLIC) {
+	$vars['value'] = ACCESS_LOGGED_IN;
 }
 
 if (is_array($vars['options_values']) && sizeof($vars['options_values']) > 0) {
