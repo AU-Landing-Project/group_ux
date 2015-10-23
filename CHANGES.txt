@@ -2,7 +2,7 @@
 
 x.x (mm/dd/yyyy):
 
-2.0.0 ():
+2.0.0 (10/22/2015):
  - Elgg 1.9 upgrade
  - removed features that are now in core or group_tools (default access)
  - much better methods for locking blogs to group admin
