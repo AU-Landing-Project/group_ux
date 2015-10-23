@@ -1,15 +1,17 @@
 <?php
+
+namespace AU\GroupUX;
+
 /**
  * Group set module
  */
-
 $group = elgg_get_page_owner_entity();
 
 $all_link = elgg_view('output/url', array(
 	'href' => "group/$group->guid/featured_content",
 	'text' => elgg_echo('link:view:all'),
 	'is_trusted' => true,
-));
+		));
 
 elgg_push_context('widgets');
 $options = array(

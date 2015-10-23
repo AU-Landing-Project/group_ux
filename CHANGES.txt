@@ -1,6 +1,12 @@
 == Version History ==
 
 x.x (mm/dd/yyyy):
+
+2.0.0 ():
+ - Elgg 1.9 upgrade
+ - removed features that are now in core or group_tools (default access)
+ - much better methods for locking blogs to group admin
+
 1.2 (01/10/2014)
  - adds ability for group admin to remove 'add' options for blogs
 

@@ -1,16 +1,18 @@
 <?php
 
+namespace AU\GroupUX;
+
 $group = $vars['entity']->getContainerEntity();
 
 if (!elgg_instanceof($group, 'group')) {
-  return true;
+	return true;
 }
 
 $all_link = elgg_view('output/url', array(
 	'href' => "group/$group->guid/featured_content",
 	'text' => elgg_echo('link:view:all'),
 	'is_trusted' => true,
-));
+		));
 
 
 $options = array(
@@ -33,5 +35,5 @@ if (!$content) {
 echo $content;
 
 if ($all_link) {
-  echo $all_link;
+	echo $all_link;
 }
